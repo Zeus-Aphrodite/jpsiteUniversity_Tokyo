@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>小学校・中学校・高等学校向け 無料ホームページテンプレート tp_school4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="東京北海高等学校"></a></h1>
+<ul class="btn">
+<li><a href="request_info.html">資料請求</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</header>
+
+<!--開閉ブロック-->
+<div id="menubar">
+
+<nav>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="goals.html">教育目標</a></li>
+<li><a href="events.html">学校行事</a>
+	<ul>
+	<li><a href="events.html#link1">一年生</a></li>
+	<li><a href="events.html#link2">二年生</a></li>
+	<li><a href="events.html#link3">三年生</a></li>
+	</ul>
+</li>
+<li><a href="club.html">部活動</a></li>
+<li><a href="voices.html">卒業生の声</a></li>
+</ul>
+</nav>
+
+</div>
+<!--/#menubar-->
+
+<main>
+
+<section>
+
+<h2>お問い合わせフォーム</h2>
+
+<!-- フォームの情報はここからです -->
+<form name="form1" enctype="multipart/form-data" method="post" action="<?php echo $_SERVER["REQUEST_URI"];?>">
+<input type="hidden" name="mode" value="form">
+<table class="ta1">
+<!-- 入力／確認 -->
+<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+<tr>
+<th width="150">お名前<span style="color:red">※</span></th>
+<td>
+<input name="item1" value="<?php echo $form["item1"];?>" type="text" size="40" maxlength="500" class="ws">
+<?php if ($msg["item1"]) echo '<div style="color:red">' . $msg["item1"] . '</div>'; ?>
+</td>
+</tr>
+<tr>
+<th width="150">メールアドレス<span style="color:red">※</span></th>
+<td>
+<input name="item2" value="<?php echo $form["item2"];?>" type="text" size="40" maxlength="500" class="ws">
+<?php if ($msg["item2"]) echo '<div style="color:red">' . $msg["item2"] . '</div>'; ?>
+</td>
+</tr>
+<tr>
+<th>お問い合わせ内容<span style="color:red">※</span></th>
+<td>
+<textarea name="item3" cols="40" rows="10" class="wl"><?php echo $form["item3"]; ?></textarea>
+<?php if ($msg["item3"]) echo '<div style="color:red">' . $msg["item3"] . '</div>'; ?>
+</td>
+</tr>
+</table>
+
+<p class="c">
+<input type="submit" value="内容を確認する">
+&nbsp;
+<input type="reset" value="リセット">
+</p>
+
+</form>
+<!-- フォームの情報はここまでです -->
+
+</section>
+
+</main>
+
+<div id="footermenu">
+<ul>
+<li class="title">メニュー見出し</li>
+<li><a href="#">サンプルメニューサンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+</ul>
+<ul>
+<li class="title">メニュー見出し</li>
+<li><a href="#">サンプルメニューサンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+</ul>
+<ul>
+<li class="title">メニュー見出し</li>
+<li><a href="#">サンプルメニューサンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+</ul>
+<ul>
+<li class="title">メニュー見出し</li>
+<li><a href="#">サンプルメニューサンプルメニューサンプルメニューサンプルメニュー</a></li>
+<li><a href="#">サンプルメニュー</a></li>
+</ul>
+</div>
+<!--/#footermenu-->
+
+<footer>
+<small>Copyright&copy; <a href="index.html">東京北海高等学校</a> All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+</div>
+<!--/#container-->
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
